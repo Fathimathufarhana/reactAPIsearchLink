@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+
  
 
 function Hook() {
@@ -21,10 +22,14 @@ function Hook() {
             onClick={
                 function name(params) {
                     console.log("decrement");
-                    setState(state-1)
+                    
+                    if (state>0) {
+                        setState(state-1)
+                    }
                 }
             }
             >-</button>
+          
         </div>
     )
 }
